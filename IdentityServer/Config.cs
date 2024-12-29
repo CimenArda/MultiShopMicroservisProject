@@ -14,7 +14,8 @@ namespace IdentityServer
         {
           new ApiResource("resourceCatalog"){Scopes= {"CatalogFullPermission","CatalogReadPermission"}},
           new ApiResource("resourceDiscount"){Scopes={"DiscountFullPermission"}},
-          new ApiResource("resourceOrder"){Scopes={"OrderFullPermission"}}
+          new ApiResource("resourceOrder"){Scopes={"OrderFullPermission"}},
+          new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
@@ -29,7 +30,8 @@ namespace IdentityServer
             new ApiScope("CatalogFullPermission","Full Authority For Catalog Operations"),
             new ApiScope("CatalogReadPermission","Reading Authority For Catalog Operations"),
             new ApiScope("DiscountFullPermission","Full Authority For Discount Operations"),
-            new ApiScope("OrderFullPermission","Full Authority For Order Operations")
+            new ApiScope("OrderFullPermission","Full Authority For Order Operations"),
+            new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
 
         };
 
