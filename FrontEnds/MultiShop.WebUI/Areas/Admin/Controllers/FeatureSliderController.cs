@@ -6,7 +6,6 @@ using System.Text;
 namespace MultiShop.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
     [Route("Admin/FeatureSlider")]
     public class FeatureSliderController : Controller
     {
