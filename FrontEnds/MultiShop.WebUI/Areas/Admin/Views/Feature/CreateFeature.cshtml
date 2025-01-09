@@ -1,0 +1,31 @@
+﻿@using MultiShop.DtoLayer.CatalogDtos.FeatureDtos
+@model CreateFeatureDto
+@{
+    ViewData["Title"] = "CreateFeature";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Öne Çıkan Ekleme Sayfası</h4>
+                <br />
+                <div class="bs-example" data-example-id="bordered-table">
+
+                    <form method="post">
+                        <label>Öne Çıkan Başlık</label>
+                        <input type="text" asp-for="FeatureName" class="form-control" />
+                        <br />
+                        <label>İkon</label>
+                        <input type="text" asp-for="Icon" class="form-control" />
+                        <br />
+
+                        <button class="btn btn-primary">Öne Çıkan Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
