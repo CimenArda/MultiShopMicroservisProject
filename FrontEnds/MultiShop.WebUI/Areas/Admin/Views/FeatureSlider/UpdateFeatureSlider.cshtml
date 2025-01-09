@@ -1,0 +1,36 @@
+﻿@using MultiShop.DtoLayer.CatalogDtos.FeatureSliderDtos
+@model UpdateFeatureSliderDto
+@{
+    ViewData["Title"] = "UpdateFeatureSlider";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Öne Çıkanlar Ekleme Sayfası</h4>
+                <br />
+                <div class="bs-example" data-example-id="bordered-table">
+
+                    <form method="post">
+                        <input type="hidden" asp-for="FeatureSliderID" />
+                        <label>Başlığı</label>
+                        <input type="text" asp-for="Title" class="form-control" />
+                        <br />
+                        <label>Açıklaması</label>
+                        <textarea asp-for="Description" class="form-control" rows="8"></textarea>
+                        <br />
+                        <label>Resim Yolu</label>
+                        <input type="text" asp-for="ImageUrl" class="form-control" />
+                        <br />
+
+                        <button class="btn btn-primary">Öne Çıkan Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
