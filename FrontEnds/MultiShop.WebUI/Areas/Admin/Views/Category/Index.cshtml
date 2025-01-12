@@ -16,6 +16,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Resimi</th>
                                 <th>Kategori Adı</th>
                                 <th>Kategoriye Ait Ürünler</th>
                                 <th>Sil</th>
@@ -28,6 +29,7 @@
                                 count++;  
                                 <tr>
                                 <th scope="row">@count</th>
+                                <td><img src="@item.ImageUrl" style="width:150px;height:100px;" /></td>
                                 <td>@item.CategoryName</td>
                                  <td><a href="#" class="btn btn-warning">Kategoriye Ait Ürünler</a></td>
                                     <td><a href="/Admin/Category/DeleteCategory/@item.CategoryID" class="btn btn-danger">Sil</a></td>
