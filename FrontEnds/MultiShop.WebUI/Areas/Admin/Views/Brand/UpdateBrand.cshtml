@@ -1,0 +1,32 @@
+﻿@using MultiShop.DtoLayer.CatalogDtos.BrandDtos
+@model UpdateBrandDto
+@{
+    ViewData["Title"] = "CreateBrand";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Marka Güncelleme Sayfası</h4>
+                <br />
+                <div class="bs-example" data-example-id="bordered-table">
+
+                    <form method="post">
+                        <input type="hidden" asp-for="BrandID" />
+                        <label>Kategori Adı</label>
+                        <input type="text" asp-for="BrandName" class="form-control" />
+                        <br />
+                        <label>Marka Resimi</label>
+                        <input type="text" asp-for="ImageUrl" class="form-control" />
+                        <br />
+
+                        <button class="btn btn-primary">Marka Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
