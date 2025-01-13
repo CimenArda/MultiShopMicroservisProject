@@ -23,6 +23,6 @@
 
 @await Component.InvokeAsync("_DefaultTodaysOfferComponentPartial")
 
-@await Component.InvokeAsync("_DefaultFeaturedProductsComponentPartial")
+@await Component.InvokeAsync("_DefaultFeaturedProductsComponentPartial",new{id = ViewBag.x})
 
 @await Component.InvokeAsync("_DefaultBrandComponentPartial")
