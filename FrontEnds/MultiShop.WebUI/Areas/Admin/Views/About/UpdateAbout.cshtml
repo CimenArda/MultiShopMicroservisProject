@@ -1,0 +1,42 @@
+﻿@using MultiShop.DtoLayer.CatalogDtos.AboutDtos
+@model UpdateAboutDto
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+<section class="content container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Hakkımızda Ekleme Sayfası</h4>
+                <br />
+                <div class="bs-example" data-example-id="bordered-table">
+
+                    <form method="post">
+                        <input type="hidden" asp-for="AboutID" />
+                        <label>Açıklama</label>
+                        <textarea class="form-control" rows="5" asp-for="Description"></textarea>
+                        <br />
+                        <label>Mail</label>
+                        <input type="text" asp-for="Email" class="form-control" />
+                        <br />
+                        <label>Adres</label>
+                        <input type="text" asp-for="Address" class="form-control" />
+                        <br />
+                        <label>Telefon</label>
+                        <input type="text" asp-for="Phone" class="form-control" />
+                        <br />
+
+                        <button class="btn btn-primary">Hakkımızda Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

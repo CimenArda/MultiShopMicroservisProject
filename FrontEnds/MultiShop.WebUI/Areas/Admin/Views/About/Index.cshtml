@@ -1,0 +1,57 @@
+﻿@using MultiShop.DtoLayer.CatalogDtos.AboutDtos
+@model List<ResultAboutDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+  
+}
+
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Hakkımızda</h4>
+                <div class="bs-example" data-example-id="bordered-table">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Açıklama</th>
+                                <th>Email</th>
+                                <th>Adres</th>
+                                <th>Telefon</th>
+                                <th>Sil</th>
+                                <th>Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                 
+                                    <td>@item.Description.Substring(0,10)..</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Address</td>
+                                    <td>@item.Phone</td>
+                                    <td><a href="/Admin/About/DeleteAbout/@item.AboutID" class="btn btn-danger">Sil</a></td>
+                                    <td><a href="/Admin/About/UpdateAbout/@item.AboutID" class="btn btn-success">Güncelle</a></td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                    @if (Model.Count>=1)
+                    {
+                        <td><a href="#" class="btn btn-danger">Hakkımızda Kısmı Yeterli Sayıdadır!</a></td>
+                    }else
+                    {
+                        <a href="/Admin/About/CreateAbout" class="btn btn-primary">Ekle</a>
+
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
