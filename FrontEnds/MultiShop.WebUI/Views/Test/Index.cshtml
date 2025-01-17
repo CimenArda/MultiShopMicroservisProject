@@ -1,0 +1,20 @@
+﻿@using MultiShop.DtoLayer.CatalogDtos.CategoryDtos
+@model List<ResultCategoryDto>
+@{
+    Layout = null;
+}
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Kategori Adı</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+        </tr>
+    }
+</table>
