@@ -48,7 +48,7 @@ namespace IdentityServer
                 ClientName="MultiShop Visitor User",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = {new Secret("multishopsecret".Sha256())},
-                AllowedScopes = { "DiscountFullPermission","CatalogReadPermission", "CatalogFullPermission" }
+                AllowedScopes = { "DiscountFullPermission", "CatalogFullPermission","CatalogReadPermission" }
             },
 
             //Manager Client

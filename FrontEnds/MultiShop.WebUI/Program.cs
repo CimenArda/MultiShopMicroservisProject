@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MultiShop.WebUI.Services;
+using MultiShop.WebUI.Services.Concrete;
+using MultiShop.WebUI.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme,opt =>
 {
     opt.LoginPath = "/Login/Index/";
-    opt.LoginPath = "/Login/LogOut/";
+    opt.LogoutPath = "/Login/LogOut/";
     opt.AccessDeniedPath = "/Pages/AccessDenied";
     opt.Cookie.HttpOnly = true;
     opt.Cookie.SameSite = SameSiteMode.Strict;
@@ -19,8 +22,19 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ILoginService,LoginService>();
 
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opt =>
+{
+	opt.LoginPath = "/Login/Index/";
+    opt.ExpireTimeSpan = TimeSpan.FromDays(1);
+    opt.Cookie.Name = "MultiShopCookie";
+    opt.SlidingExpiration = true;
+
+});
+
 builder.Services.AddControllersWithViews();
-builder.Services.AddHttpClient();
+builder.Services.AddScoped<ILoginService,LoginService>();
+
+builder.Services.AddHttpClient<IIdentityService,IdentityService>();
 
 var app = builder.Build();
 
@@ -41,7 +55,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Default}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.UseEndpoints(endpoints =>
 {
