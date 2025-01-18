@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MultiShop.WebUI.Services;
 using MultiShop.WebUI.Services.Concrete;
 using MultiShop.WebUI.Services.Interfaces;
+using MultiShop.WebUI.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,11 +31,17 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     opt.SlidingExpiration = true;
 
 });
-
+builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ILoginService,LoginService>();
 
 builder.Services.AddHttpClient<IIdentityService,IdentityService>();
+
+builder.Services.Configure<ClientSettings>(builder.Configuration.GetSection("ClientSettings"));   
+builder.Services.Configure<ServiceApiSettings>(builder.Configuration.GetSection("ServiceApiSettings"));   
+
+
+
 
 var app = builder.Build();
 
