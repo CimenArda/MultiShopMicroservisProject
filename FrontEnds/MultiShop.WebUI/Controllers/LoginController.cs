@@ -15,12 +15,12 @@ namespace MultiShop.WebUI.Controllers
 	public class LoginController : Controller
 	{
 		private readonly IHttpClientFactory _httpClientFactory;
-		private readonly ILoginService _loginService;
+	
 		private readonly IIdentityService _identityService;
-		public LoginController(IHttpClientFactory httpClientFactory, ILoginService loginService, IIdentityService identityService)
+		public LoginController(IHttpClientFactory httpClientFactory, IIdentityService identityService)
 		{
 			_httpClientFactory = httpClientFactory;
-			_loginService = loginService;
+		
 			_identityService = identityService;
 		}
 
