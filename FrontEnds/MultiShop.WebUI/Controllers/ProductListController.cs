@@ -15,6 +15,7 @@ namespace MultiShop.WebUI.Controllers
         }
         public IActionResult Index(string id)
         {
+          
             ViewBag.i = id;
             return View();
         }
