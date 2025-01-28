@@ -8,7 +8,6 @@ namespace MultiShop.Comment.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AllowAnonymous]
     public class CommentsController : ControllerBase
     {
 
@@ -33,7 +32,7 @@ namespace MultiShop.Comment.Controllers
             var value = _commentContext.UserComments.Find(id);
             return Ok(value);
         }
-        [HttpGet("CommentListByProductID")]
+        [HttpGet("CommentListByProductID/{id}")]
         public IActionResult CommentListByProductID(string id)
         {
             var value = _commentContext.UserComments.Where(x => x.ProductID == id).ToList();
