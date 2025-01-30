@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Microsoft.EntityFrameworkCore;
 using MultiShop.Discount.Context;
 using MultiShop.Discount.Dtos.CouponDtos;
 
@@ -48,7 +49,17 @@ namespace MultiShop.Discount.Services
                 return values.ToList();
             }
         }
-
+        public async Task<ResultCouponDto> GetCodeDetailByCodeAsync(string code)
+        {
+            string query = "Select * From Coupons Where Code=@code";
+            var parameters = new DynamicParameters();
+            parameters.Add("@code", code);
+            using (var connection = _dapperContext.CreateConnection())
+            {
+                var values = await connection.QueryFirstOrDefaultAsync<ResultCouponDto>(query, parameters);
+                return values;
+            }
+        }
         public async Task<GetByIdCouponDto> GetByIdCouponAsync(int id)
         {
             string query = "Select * from Coupones where CouponID =@couponID";
