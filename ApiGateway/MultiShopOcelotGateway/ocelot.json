@@ -52,7 +52,7 @@
       "UpstreamScheme": "https",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "OcelotAuthenticationScheme",
-        "AllowedScopes": [ "OrderFullPermisson" ]
+        "AllowedScopes": [ "OrderFullPermission" ]
       }
 
     },

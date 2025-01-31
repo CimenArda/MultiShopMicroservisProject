@@ -21,14 +21,23 @@ namespace MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
 
         public async Task<GetAddressByIdQueryResult> Handle(GetAddressByIdQuery query)
         {
-            var value = await _repository.GetByIdAsync(query.Id);
+            var values = await _repository.GetByIdAsync(query.Id);
             return new GetAddressByIdQueryResult
             {
-                AddressID = value.AddressID,
-                City = value.City,
-                Detail = value.Detail,
-                District = value.District,
-                UserID = value.UserID
+                AddressID = values.AddressID,
+                City = values.City,
+                Detail1 = values.Detail1,
+                District = values.District,
+                UserID = values.UserID,
+                ZipCode = values.ZipCode,
+                Surname = values.Surname,
+                Phone =values.Phone,
+                Name = values.Name,
+                Email = values.Email,
+                Detail2 = values.Detail2,
+                Description = values.Description,
+                Country = values.Country
+                
             };
 
         }
