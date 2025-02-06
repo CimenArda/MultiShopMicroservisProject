@@ -63,15 +63,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{B95A5061-297F-48EC-8E5A-DFD2463809FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopOcelotGateway", "ApiGateway\MultiShopOcelotGateway\MultiShopOcelotGateway.csproj", "{C25BE47A-DF64-42E8-A2E2-94DE7B8310B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopOcelotGateway", "ApiGateway\MultiShopOcelotGateway\MultiShopOcelotGateway.csproj", "{C25BE47A-DF64-42E8-A2E2-94DE7B8310B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{A2153A22-189B-4C06-984E-9BA455E69934}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Payment", "Payment\MultiShop.Payment\MultiShop.Payment.csproj", "{EE86BED5-5CF3-4A66-B8D2-226D081501E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Payment", "Payment\MultiShop.Payment\MultiShop.Payment.csproj", "{EE86BED5-5CF3-4A66-B8D2-226D081501E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "İmages", "İmages", "{C3E93668-BB26-44D6-9CFD-8DC298835F9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Images", "Images\MultiShop.Images\MultiShop.Images.csproj", "{139BE5FD-484E-4782-8BB0-EC590B18F3D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Images", "Images\MultiShop.Images\MultiShop.Images.csproj", "{139BE5FD-484E-4782-8BB0-EC590B18F3D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Message", "Message", "{AFA2B08D-6B5C-42C4-9927-F77315559705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Message", "Services\Message\MultiShop.Message\MultiShop.Message.csproj", "{23E817BF-9631-4F55-866C-7F04468525EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -155,6 +159,10 @@ Global
 		{139BE5FD-484E-4782-8BB0-EC590B18F3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{139BE5FD-484E-4782-8BB0-EC590B18F3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{139BE5FD-484E-4782-8BB0-EC590B18F3D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E817BF-9631-4F55-866C-7F04468525EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E817BF-9631-4F55-866C-7F04468525EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E817BF-9631-4F55-866C-7F04468525EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E817BF-9631-4F55-866C-7F04468525EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -190,6 +198,8 @@ Global
 		{EE86BED5-5CF3-4A66-B8D2-226D081501E8} = {A2153A22-189B-4C06-984E-9BA455E69934}
 		{C3E93668-BB26-44D6-9CFD-8DC298835F9A} = {8E4ABDF9-A2D6-49D4-84DC-62C26D240F3E}
 		{139BE5FD-484E-4782-8BB0-EC590B18F3D2} = {C3E93668-BB26-44D6-9CFD-8DC298835F9A}
+		{AFA2B08D-6B5C-42C4-9927-F77315559705} = {8E4ABDF9-A2D6-49D4-84DC-62C26D240F3E}
+		{23E817BF-9631-4F55-866C-7F04468525EB} = {AFA2B08D-6B5C-42C4-9927-F77315559705}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0572E39-95F1-4920-83AA-BCC768CA960A}
