@@ -161,7 +161,7 @@
           "Port": 7099
         }
       ],
-      "UpstreamPathTemplate": "/services/images/{everything}",
+      "UpstreamPathTemplate": "/services/message/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "UpstreamScheme": "https",
       "AuthenticationOptions": {

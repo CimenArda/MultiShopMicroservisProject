@@ -38,7 +38,7 @@ namespace MultiShop.WebUI.Handlers
 			{
 				//hata mesajı
 			}
-			return response;
+			 return response;
 		}
 	}
 }
