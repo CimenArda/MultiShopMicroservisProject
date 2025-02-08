@@ -47,6 +47,19 @@ namespace MultiShop.Message.Services
             var values = await _messageContext.UserMessages.Where(x => x.SenderID == id).ToListAsync();
             return _mapper.Map<List<ResultSendboxMessageDto>>(values);
         }
+
+        public async Task<int> GetTotalMessageCountAsync()
+        {
+           var value = await _messageContext.UserMessages.CountAsync();
+            return _mapper.Map<int>(value);
+        }
+
+        public async Task<int> GetTotalMessageCountByReceiverIDAsync(string id)
+        {
+            var value = await _messageContext.UserMessages.Where(x => x.ReceiverID == id).CountAsync();
+            return _mapper.Map<int>(value);
+        }
+
         public async Task UpdateMessageAsync(UpdateMessageDto updateMessageDto)
         {
             var values = _mapper.Map<UserMessage>(updateMessageDto);
