@@ -71,7 +71,12 @@ namespace MultiShop.WebUI.Controllers
 			var values = await _categoryService.GetAllCategoryAsync();
 			return View(values);
 		}
-	
+
+
+        public IActionResult test2()
+        {
+            return View();
+        }
 
 
 
@@ -79,6 +84,5 @@ namespace MultiShop.WebUI.Controllers
 
 
 
-
-	}
+    }
 }
