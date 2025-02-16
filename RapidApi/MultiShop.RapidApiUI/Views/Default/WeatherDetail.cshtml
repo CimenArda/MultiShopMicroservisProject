@@ -1,0 +1,12 @@
+﻿@{
+    Layout = null;
+    double fahrenheit = ViewBag.cityTemp;
+    double celsius = (fahrenheit - 32) * 5 / 9;
+}
+
+<div class="container">
+    <br />
+    <label class="alert alert-danger">Ankara Hava Durumu</label>
+
+    <h3>Ankara Hava Durumu: @celsius.ToString("0.##") °C</h3>
+</div>
