@@ -1,6 +1,6 @@
 # MultiShop - Mikroservis Tabanlı E-Ticaret Platformu
 
-MultiShop, kullanıcıların oturum açarak veya ziyaretçi olarak giriş yapabildiği, ürün arama, listeleme ve alışveriş yapma imkanı sunan kapsamlı bir e-ticaret platformudur. Kullanıcılar, satın alma işlemlerini tamamladıktan sonra siparişlerini takip edebilir ve yönetebilirler. Bu proje, kullanıcı arayüzü ve yönetim paneli ile modern bir alışveriş deneyimi sunmaktadır.
+MultiShop, kullanıcıların oturum açarak veya ziyaretçi olarak giriş yapabildiği, ürün arama, listeleme ve alışveriş yapma imkanı sunan kapsamlı bir e-ticaret platformudur.
 
 ## 🚀 Projeye Genel Bakış
 ### 🖥️ Yönetim Paneli
